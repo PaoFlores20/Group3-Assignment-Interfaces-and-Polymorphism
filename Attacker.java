@@ -1,7 +1,7 @@
 /*sets the general methods to be used when the characters attack each other*/
 
-public interface AttackerInterface
-{
- public void attack();
- public abstract int getKillCount();
-}
+ public interface AttackerInterface
+ {
+  public void attack();
+  public int getKillCount();
+ }
