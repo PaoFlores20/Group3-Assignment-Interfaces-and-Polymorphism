@@ -5,7 +5,7 @@ public class AngryDuck extends WaterFowl implements Teleporter
      public AngryDuck()
      {
           super();
-     }//end of AngryDuck()
+     }//end of AngryDuck(). 12122
      
      public AngryDuck(String name, String primaryColor)
      {
@@ -37,7 +37,6 @@ public class AngryDuck extends WaterFowl implements Teleporter
                System.out.println(super.name + " is swimming");
           }
      }//end of swim()
-     
      // add from here !!!
      public void teleport (int x, int y)
      {
@@ -63,9 +62,4 @@ public class AngryDuck extends WaterFowl implements Teleporter
      {
           return this.getName() + "'s position is:(" + x + "," + y +")";
      }//end of 
-     
-     
-     
-     
-     
 }//end of class
