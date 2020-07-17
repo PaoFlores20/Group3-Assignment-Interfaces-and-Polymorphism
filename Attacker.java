@@ -3,5 +3,5 @@
 public interface AttackerInterface
 {
  public void attack();
- public static int getKillCount();
+ public abstract int getKillCount();
 }
