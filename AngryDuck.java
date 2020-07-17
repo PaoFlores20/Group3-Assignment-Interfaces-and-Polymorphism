@@ -5,7 +5,7 @@ public class AngryDuck extends WaterFowl
      public AngryDuck()
      {
           super();
-     }//end of AngryDuck()
+     }//end of AngryDuck(). 12122
      
      public AngryDuck(String name, String primaryColor)
      {
