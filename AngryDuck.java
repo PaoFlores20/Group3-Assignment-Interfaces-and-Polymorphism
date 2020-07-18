@@ -1,10 +1,10 @@
-/*Author: Paola Flores ID T00651883*/
-
-public class AngryDuck extends WaterFowl implements Teleporter
+public class AngryDuck extends WaterFowl implements Attacker, Teleporter
 {
+     private int killCount;
      public AngryDuck()
      {
           super();
+          killCount = 0;
      }//end of AngryDuck()
      
      public AngryDuck(String name, String primaryColor)
@@ -43,29 +43,130 @@ public class AngryDuck extends WaterFowl implements Teleporter
      {
           if( x < HALF || x > WIDTH )
           {
-              System.out.println(this.getName()+ " cant teleport,value x is out of range [500,1000]");
-              return;
+               System.out.println(this.getName()+ " cant teleport,value x is out of range [500,1000]");
+               return;
           }
-    
+          
           if( y > HEIGHT || y < 0 )
           {
-              System.out.println(this.getName() + " cant teleport, value y is out of range [0,1000]");
-              return;
+               System.out.println(this.getName() + " cant teleport, value y is out of range [0,1000]");
+               return;
           }
           Animal.x = x;
           Animal.y = y;
           System.out.println(getPosition());
-    
-      }//end of 
-  
+          
+     }//end of teleport()
      
-     public String getPosition() 
+          public String getPosition() 
      {
           return this.getName() + "'s position is:(" + x + "," + y +")";
-     }//end of 
+     }//end of getPosition() 
      
+                                                    /////////
+      public void attack(HappyPig animal)
+     {
+          //int killCount;
+          
+          if (animal.getClass().getSimpleName().equals("LoudGoose"))
+          {
+               System.out.println("I cannot attack, it is my friend!!");
+          }
+          else
+          {
+               if(animal.health==1)
+               {
+                    animal.hit();
+                    killCount++;
+                    System.out.println(this.name + " got a Kill Point!!");
+                    System.out.println("Kill points: " + this.getKillCount());
+               }
+               else 
+               {
+                    animal.hit();
+               }
+          }
+          
+     }//end of attack()
      
+     public void attack(CuriousBunny animal)
+     {
+          //int killCount;
+          
+          if (animal.getClass().getSimpleName().equals("LoudGoose"))
+          {
+               System.out.println("I cannot attack, it is my friend!!");
+          }
+          else
+          {
+               if(animal.health==1)
+               {
+                    animal.hit();
+                    killCount++;
+                    System.out.println(this.name + " got a Kill Point!!");
+                    System.out.println("Kill points: " + this.getKillCount());
+               }
+               else 
+               {
+                    animal.hit();
+               }
+          }
+          
+     }//end of attack()
      
+     public void attack(LoudGoose animal)
+     {
+          //int killCount;
+          
+          if (animal.getClass().getSimpleName().equals("LoudGoose"))
+          {
+               System.out.println("I cannot attack, it is my friend!!");
+          }
+          else
+          {
+               if(animal.health==1)
+               {
+                    animal.hit();
+                    killCount++;
+                    System.out.println(this.name + " got a Kill Point!!");
+                    System.out.println("Kill points: " + this.getKillCount());
+               }
+               else 
+               {
+                    animal.hit();
+               }
+          }
+          
+     }//end of attack()
      
+     public void attack(AngryDuck animal)
+     {
+          //int killCount;
+          
+          if (animal.getClass().getSimpleName().equals("LoudGoose"))
+          {
+               System.out.println("I cannot attack, it is my friend!!");
+          }
+          else
+          {
+               if(animal.health==1)
+               {
+                    animal.hit();
+                    killCount++;
+                    System.out.println(this.name + " got a Kill Point!!");
+                    System.out.println("Kill points: " + this.getKillCount());
+               }
+               else 
+               {
+                    animal.hit();
+               }
+          }
+          
+     }//end of attack()
+     
+     public int getKillCount()
+     {
+          return killCount;
+     }//end of getKillCount()
      
 }//end of class
